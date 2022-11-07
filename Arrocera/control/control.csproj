@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9A1AA91-23EF-4112-A950-D034ACE8C964}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>control</RootNamespace>
+    <AssemblyName>control</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>E:\Proyectos\Almacen_De_Ropa\Almacen_De_Ropa\bin\Debug\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>E:\archivoas varios\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controlador.cs" />
+    <Compile Include="Control_agregacion.cs" />
+    <Compile Include="Control_apertura.cs" />
+    <Compile Include="Control_cierre.cs" />
+    <Compile Include="Control_cliente.cs" />
+    <Compile Include="Control_compra.cs" />
+    <Compile Include="Control_contraseña_recuperar.cs" />
+    <Compile Include="Control_credito.cs" />
+    <Compile Include="Control_devoluciones.cs" />
+    <Compile Include="Control_gasto.cs" />
+    <Compile Include="control_login.cs" />
+    <Compile Include="Control_movimiento.cs" />
+    <Compile Include="control_producto.cs" />
+    <Compile Include="control_proveedor.cs" />
+    <Compile Include="Control_reporte_venta.cs" />
+    <Compile Include="control_usuario.cs" />
+    <Compile Include="control_venta.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\puente\puente.csproj">
+      <Project>{148b0a65-24c3-4c79-a460-a034db3516cf}</Project>
+      <Name>puente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\relacion\relacion.csproj">
+      <Project>{afc64cdf-e175-403d-a40b-31ef419f4c0d}</Project>
+      <Name>relacion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

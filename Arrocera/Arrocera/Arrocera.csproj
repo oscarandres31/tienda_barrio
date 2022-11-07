@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AD0B7F2-C3CA-4C77-B92C-8EDEAC319DA3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Arrocera</RootNamespace>
+    <AssemblyName>Arrocera</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>arrocera.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Arrocera.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Controls">
+      <HintPath>E:\Descargas\AForge.NET Framework-2.2.5\Release\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\..\..\..\..\Downloads\AlphaBlendTextBox\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Design Dashboard Modern\PROYECTO DESIGN DASHBOARD\Design Dashboard Modern\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Mono.Security">
+      <HintPath>E:\Proyectos\Almacen_De_Ropa\Almacen_De_Ropa\bin\Debug\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>E:\archivoas varios\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="abrir_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="abrir_caja.Designer.cs">
+      <DependentUpon>abrir_caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_credito.Designer.cs">
+      <DependentUpon>Agregar_credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cerrar_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cerrar_caja.Designer.cs">
+      <DependentUpon>cerrar_caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="clientes.Designer.cs">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="compras.Designer.cs">
+      <DependentUpon>compras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creditos.Designer.cs">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cuentas_cobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cuentas_cobrar.Designer.cs">
+      <DependentUpon>Cuentas_cobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detalles_venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalles_venta.Designer.cs">
+      <DependentUpon>detalles_venta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_caja.Designer.cs">
+      <DependentUpon>Detalle_caja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalle_compra.Designer.cs">
+      <DependentUpon>detalle_compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_credito.Designer.cs">
+      <DependentUpon>Detalle_credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detalle_devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalle_devoluciones.Designer.cs">
+      <DependentUpon>detalle_devoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle_gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detalle_gastos.Designer.cs">
+      <DependentUpon>Detalle_gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="devoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="devoluciones.Designer.cs">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagar_credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagar_credito.Designer.cs">
+      <DependentUpon>Pagar_credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_clientes.Designer.cs">
+      <DependentUpon>Registro_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_print.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gastos.Designer.cs">
+      <DependentUpon>gastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="movimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movimientos.Designer.cs">
+      <DependentUpon>movimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevo_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevo_cliente.Designer.cs">
+      <DependentUpon>Nuevo_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagos.Designer.cs">
+      <DependentUpon>pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="producto.Designer.cs">
+      <DependentUpon>producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedores.Designer.cs">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recuperar_contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recuperar_contraseña.Designer.cs">
+      <DependentUpon>Recuperar_contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reporte_ventas_visor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reporte_ventas_visor.Designer.cs">
+      <DependentUpon>reporte_ventas_visor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="venta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="venta.Designer.cs">
+      <DependentUpon>venta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="abrir_caja.resx">
+      <DependentUpon>abrir_caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_credito.resx">
+      <DependentUpon>Agregar_credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cerrar_caja.resx">
+      <DependentUpon>cerrar_caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clientes.resx">
+      <DependentUpon>clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compras.resx">
+      <DependentUpon>compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creditos.resx">
+      <DependentUpon>Creditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cuentas_cobrar.resx">
+      <DependentUpon>Cuentas_cobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detalles_venta.resx">
+      <DependentUpon>detalles_venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_caja.resx">
+      <DependentUpon>Detalle_caja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detalle_compra.resx">
+      <DependentUpon>detalle_compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_credito.resx">
+      <DependentUpon>Detalle_credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detalle_devoluciones.resx">
+      <DependentUpon>detalle_devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detalle_gastos.resx">
+      <DependentUpon>Detalle_gastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="devoluciones.resx">
+      <DependentUpon>devoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gastos.resx">
+      <DependentUpon>gastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movimientos.resx">
+      <DependentUpon>movimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo_cliente.resx">
+      <DependentUpon>Nuevo_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagar_credito.resx">
+      <DependentUpon>Pagar_credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagos.resx">
+      <DependentUpon>pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="producto.resx">
+      <DependentUpon>producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="proveedores.resx">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recuperar_contraseña.resx">
+      <DependentUpon>Recuperar_contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro_clientes.resx">
+      <DependentUpon>Registro_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte_ventas_visor.resx">
+      <DependentUpon>reporte_ventas_visor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="venta.resx">
+      <DependentUpon>venta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dia1.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_usb_connected_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_litter_disposal_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\control\control.csproj">
+      <Project>{d9a1aa91-23ef-4112-a950-d034ace8c964}</Project>
+      <Name>control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\relacion\relacion.csproj">
+      <Project>{afc64cdf-e175-403d-a40b-31ef419f4c0d}</Project>
+      <Name>relacion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_expeditedssl_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_close_window_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="arrocera.ico" />
+    <None Include="Resources\icons8_ingredients_48px.png" />
+    <None Include="Resources\icons8_copy_48px.png" />
+    <None Include="Resources\icons8_budget_48px.png" />
+    <None Include="Resources\Compras.png" />
+    <None Include="Resources\icons8_cash_in_hand_48px.png" />
+    <None Include="Resources\images-41.jpg" />
+    <None Include="Resources\icons8_print_48px.png" />
+    <None Include="Resources\icons8_cancel_2_48px.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\icons8_save_all_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
